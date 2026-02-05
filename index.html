@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔥 GOOGLE TITLE -->
+  <title>VB Tech Resume Maker | Free Online Resume Builder</title>
+
+  <!-- 🔥 GOOGLE DESCRIPTION -->
+  <meta name="description"
+        content="VB Tech Resume Maker is a free online resume builder to create professional resumes with photo upload and PDF or image download. Simple, fast and mobile friendly.">
+
+  <!-- (optional but good) -->
+  <meta name="keywords"
+        content="resume maker, resume builder, vb tech resume, free resume maker, online resume builder">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ===== FORM ===== -->
+  <div class="form">
+    <h2>Resume Details</h2>
+
+    <input type="file" id="photo">
+
+    <input id="name" placeholder="Full Name">
+    <input id="role" placeholder="Job Title">
+    <input id="phone" placeholder="Phone">
+    <input id="email" placeholder="Email">
+    <textarea id="address" placeholder="Address"></textarea>
+
+    <textarea id="summary" placeholder="Professional Summary"></textarea>
+    <textarea id="skills" placeholder="Skills (HTML, CSS, JS)"></textarea>
+
+    <h3>Education</h3>
+    <input id="edu10" placeholder="10th Board / School">
+    <input id="edu12" placeholder="12th Board / School">
+    <input id="ugcollege" placeholder="UG College / Degree">
+    <input id="pgcollege" placeholder="PG College / Degree">
+
+    <h3>Experience</h3>
+    <input id="company" placeholder="Company Name">
+    <input id="expRole" placeholder="Designation">
+    <input id="years" placeholder="Years">
+
+    <button onclick="generateResume()">Generate Resume</button>
+    <button type="button" class="download" onclick="downloadResume()">
+  Download Resume
+</button>
+
+  </div>
+
+  <!-- ===== RESUME PREVIEW ===== -->
+  <div id="resume" class="resume">
+
+    <div class="header">
+      <div class="photo-box">
+        <img id="r-photo" alt="">
+      </div>
+
+      <div class="header-text">
+        <h1 id="r-name"></h1>
+        <h3 id="r-role"></h3>
+        <p id="r-contact"></p>
+        <p id="r-address"></p>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <h4>Education</h4>
+      <ul>
+        <li id="r-edu10" style="display:none"></li>
+        <li id="r-edu12" style="display:none"></li>
+        <li id="r-ugcollege" style="display:none"></li>
+        <li id="r-pgcollege" style="display:none"></li>
+      </ul>
+
+      <h4>Experience</h4>
+      <p><b id="r-company"></b></p>
+      <p id="r-expRole"></p>
+      <p id="r-years"></p>
+
+      <h4>Skills</h4>
+      <ul id="r-skills"></ul>
+
+      <h4>Summary</h4>
+      <p id="r-summary"></p>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  © 2026 Vidyabhushan Sahu | Resume Builder<br>
+  Free to use • MIT Licensed
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
